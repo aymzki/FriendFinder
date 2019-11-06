@@ -1,5 +1,5 @@
-//load data
-//var friendData = require ("../data/friends");
+//load data, require friends.js
+var friends = require('../data/friends.js');
 
 //routing
 module.exports = function(app) {
@@ -9,19 +9,48 @@ module.exports = function(app) {
         res.json(friends);
     });
 // API POST Requests
-  // Below code handles when a user submits a form and thus submits data to the server.
-  //a POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
-   app.post("/api/tables", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body parsing middleware
-    if (friend.length < 5) {
-      friend.push(req.body);
-      res.json(true);
-    }
-    else {
-      friend.push(req.body);
-      res.json(false);
-    }
-  });
+  //a POST route for /api/friends. This will be used to handle incoming survey results. 
+  //This route also handles the compatibility logic.
+   app.post("/api/friends", function(req, res) {
+       //loop through all options
+    var bestMatch = {
+        name: "",
+        photo: "",
+        friendDifference: 1000
+    };
+//parse results 
+var userData = req.body;
+var userScores = userData.scores;
+//take results of the user's name and photo, other than the survey questions, to post and parse it
+var userName = userData.name;
+var userPhoto = userData.photo; 
+//var calculates the difference of a user's scores versus others'
+var totalDifference = 0;
+
+// //loop through the friends data array of objects to get each friends scores
+// for (var i = 0; i < friends.length - 1; i++) {
+//     console.log(friends[i].name);
+//     totalDifference = 0;
+
+//     //loop through that friends score and the users score and calculate the absolute difference between the two and push that to the total difference variable set above
+//     for (var j = 0; j < 10; j++) {
+//         // We calculate the difference between the scores and sum them into the totalDifference
+//         totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+//         // If the sum of differences is less then the differences of the current "best match"
+//         if (totalDifference <= bestMatch.friendDifference) {
+
+//             // Reset the bestMatch to be the new friend. 
+//             bestMatch.name = friends[i].name;
+//             bestMatch.photo = friends[i].photo;
+//             bestMatch.friendDifference = totalDifference;
+//         }
+//     }
+// }
+
+// // The push method use to save user's data to the database
+// friends.push(userData);
+
+// //The res.json method will return a JSON data with the user's match which was looped through frieds data array. 
+// res.json(bestMatch);
+});
 };

@@ -15,7 +15,23 @@ var friendArray = [
         4,
         1
       ]
-  }
+  },
+{
+    "name":"Taylor",
+    "photo":"https://www.bravotv.com/sites/bravo/files/2019-10/taylor-armstrong-cat-yelling-meme.jpg",
+    "scores":[
+        4,
+        3,
+        1,
+        2,
+        3,
+        2,
+        2,
+        1,
+        5,
+        2
+    ]
+}
 ];
 
 // export the array so it is accessible to other files using require.
