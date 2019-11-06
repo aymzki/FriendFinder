@@ -1,5 +1,5 @@
 //Data for each person signed up
-var friendArray = [
+var friends = [
 {
     "name":"Smudge",
     "photo":"https://i.kym-cdn.com/photos/images/newsfeed/001/505/718/136.jpg",
@@ -35,4 +35,4 @@ var friendArray = [
 ];
 
 // export the array so it is accessible to other files using require.
-module.exports = friendArray;
+module.exports = friends;
