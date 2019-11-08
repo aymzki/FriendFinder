@@ -8,15 +8,19 @@
     <title>Document</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <!--FontAwesome-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--jQuery-->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    
 </head>
 <style>
     .container {
         width: 50%;
     }
+    /* #match-img {
+        width: 50%;
+    } */
 </style>
 
 <body>
@@ -38,7 +42,7 @@
         <h3><strong>Question 1</strong></h3>
         <h4>Are you more of an optimist than a pessimist?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q1">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -49,7 +53,7 @@
         <h3><strong>Question 2</strong></h3>
         <h4>Do you often regret oversharing things about yourself?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q2">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -60,7 +64,7 @@
         <h3><strong>Question 3</strong></h3>
         <h4>Do you like to be active (sports, hiking, yoga, etc)?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q3">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -71,7 +75,7 @@
         <h3><strong>Question 4</strong></h3>
         <h4>Do you prefer a crazy night out over a quiet night in?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q4">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -82,7 +86,7 @@
         <h3><strong>Question 5</strong></h3>
         <h4>Are you more of a cat person than a dog person?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q5">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -93,7 +97,7 @@
         <h3><strong>Question 6</strong></h3>
         <h4>When you travel do you like to wing it than follow a specific itinerary?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q6">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -104,7 +108,7 @@
         <h3><strong>Question 7</strong></h3>
         <h4>Do you often think about the meaning of life?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q7">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -115,7 +119,7 @@
         <h3><strong>Question 8</strong></h3>
         <h4>Do you pay more attention to detail over having the bigger picture?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q8">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -126,7 +130,7 @@
         <h3><strong>Question 9</strong></h3>
         <h4>When making a huge decision do you let your heart guide you more than your mind?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q9">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -137,7 +141,7 @@
         <h3><strong>Question 10</strong></h3>
         <h4>Is it easy for you to forgive others?</h4>
         <div class="form-group">
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="q10">
                 <option>1 (strongly disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -158,8 +162,7 @@
     </hr>
     <footer class="footer">
         <div class="container">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/aymzki/FriendFinder">GitHub
-                    Repo</a></p>
+                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/aymzki/FriendFinder">GitHub Repo</a></p>
         </div>
     </footer>
 
@@ -187,27 +190,12 @@
 
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
     <script type="text/javascript">
-        // // Chosen CSS
-        // var config = {
-        //     ".chosen-select": {},
-        //     ".chosen-select-deselect": {
-        //         allow_single_deselect: true
-        //     },
-        //     ".chosen-select-no-single": {
-        //         disable_search_threshold: 10
-        //     },
-        //     ".chosen-select-no-results": {
-        //         no_results_text: "Oops, nothing found!"
-        //     },
-        //     ".chosen-select-width": {
-        //         width: "95%"
-        //     }
-        // };
-        // for (var selector in config) {
-        //     $(selector).chosen(config[selector]);
-        // }
+      
         // Capture the form inputs
         $("#submit").on("click", function (event) {
             event.preventDefault();
@@ -223,7 +211,7 @@
             }
             // If all required fields are filled
             if (validateForm()) {
-                // Create an object for the user"s data
+                // Create an object for the user's data
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
@@ -242,11 +230,12 @@
                 };
                 // AJAX post data to the friends API.
                 $.post("/api/friends", userData, function (data) {
+                    console.log(data);
                     // Grab the result from the AJAX post, display the best match name and photo
                     $("#match-name").text(data.name);
                     $("#match-img").attr("src", data.photo);
                     // Show the modal with the best match
-                    $("#results-modal").modal("toggle");
+                    $("#results-modal").modal("show");
                 });
             } else {
                 alert("Have you filled out everything?");
